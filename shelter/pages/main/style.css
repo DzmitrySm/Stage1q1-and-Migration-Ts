@@ -1,0 +1,40 @@
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.list-items {
+    list-style: none;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-spans {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.list-items {
+    display: flex;  
+}
+
+.list-item{
+    padding-right: 35px;
+}
+
+.list-item:first-child {
+    text-decoration: underline;
+}
+
+.list-item:last-child {
+    padding: 0;
+}
