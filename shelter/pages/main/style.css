@@ -1,3 +1,9 @@
+.header {
+background: url('../../assets/images/start-screen-gradient-background.jpg');
+background-repeat: no-repeat;
+background-position: center 0;
+}
+
 .container {
     max-width: 1280px;
     margin: 0 auto;
@@ -37,4 +43,31 @@
 
 .list-item:last-child {
     padding: 0;
+}
+
+.text-title {
+    margin: 0;
+}
+
+.section-with-pic {
+    background-image: url('../../assets/images/start-screen-gradient-background.jpg');
+    background-repeat: no-repeat;
+    background-position: center -120px;
+} 
+
+.flex-section-with-pic {
+    display: flex;
+}
+
+
+.flex {
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+}
+
+.button-coloured {
+background: #F1CDB3;
+border-radius: 100px;
+padding: 15px 45px;
 }
