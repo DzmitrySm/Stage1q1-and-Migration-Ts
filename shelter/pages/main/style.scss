@@ -1,0 +1,111 @@
+@import "normalize.css";
+$title-shelter-color: #F1CDB3;
+$font-normal: 400;
+$font-family-georgia: "Georgia", "Garamond", serif;
+$font-family-arial: "Arial", "Verdana", sans-serif;
+$color-light: #FFFFFF;
+$color-not-selected-nav: #CDCDCD;
+$font-size-15: 15px;
+
+
+
+
+* {
+    box-sizing: border-box;
+  }
+
+.header {
+    background: url('../../assets/images/start-screen-gradient-background.jpg');
+    background-repeat: no-repeat;
+    background-position: center 0;
+}
+
+.container {
+     max-width: 1280px;
+     margin: 0 auto;
+     padding: 0 40px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    >div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h1 {
+            padding-top: 60px;
+            padding-bottom: 10px;
+            margin: 0;
+            color: $title-shelter-color;
+            font-weight: $font-normal;
+            font-family:$font-family-georgia;
+
+        }
+        span {
+            padding-bottom: 60px;
+            font-size: 13px;
+            font-family: $font-family-arial;
+            font-weight: $font-normal;
+            color: $color-light;
+        }
+    }
+} 
+
+.navigation {
+    ul {
+        display: flex;
+        padding-top: 76px;
+        padding-bottom: 17px;
+        margin: 0;
+        list-style: none;
+        li {
+            padding-right: 35px;
+            color: $color-not-selected-nav;
+            &:first-child {
+                text-decoration: underline;
+                text-decoration-color: $title-shelter-color;
+                color: #FAFAFA;
+            }
+            &:last-child {
+                padding: 0;
+            }
+        }
+    }
+}
+
+.section-with-pic {
+background-image: url("../../assets/images/start-screen-gradient-background.jpg");
+  background-position: center -180px;
+  background-repeat: no-repeat;
+  
+} 
+
+.flex-section-with-pic {
+    display: flex;
+    background-image: url("../../assets/images/main_foto.png");
+    
+    div {
+        h2 {
+            margin: 0;
+            font-family:$font-family-georgia;
+            font-size: 44px;
+            color: $color-light;
+        }
+        p {
+            font-family:$font-family-arial;
+            font-size: $font-size-15;
+            color: $color-not-selected-nav;
+
+        }
+    }
+}
+
+.button {
+    padding-bottom: 350px;
+    button {
+        background: $title-shelter-color;
+        border-radius: 100px;
+        padding: 15px 45px;
+    }
+}
