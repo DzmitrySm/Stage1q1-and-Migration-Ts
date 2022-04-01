@@ -81,6 +81,7 @@
   font-family: "Arial", "Verdana", sans-serif;
   font-size: 15px;
   color: #CDCDCD;
+  line-height: 24px;
 }
 
 .button {
@@ -90,4 +91,79 @@
   background: #F1CDB3;
   border-radius: 100px;
   padding: 15px 45px;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+  padding-top: 80px;
+}
+.flex h2 {
+  margin: 0;
+  font-family: "Georgia", "Garamond", serif;
+  font-size: 35px;
+  font-weight: 400;
+}
+.flex p {
+  font-size: 15px;
+  line-height: 24px;
+  color: #4C4C4C;
+}
+
+.padding-from-text {
+  padding-bottom: 10px;
+}
+
+.our-friends h2 {
+  text-align: center;
+}
+
+.flex-our-friends {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-our-friends > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-other-pets {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-cards-first-string {
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+}
+.flex-cards-first-string div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-cards-second-string {
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+}
+.flex-cards-second-string div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-donation {
+  display: flex;
+  justify-content: center;
+}
+.flex-donation div {
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=style.css.map */
