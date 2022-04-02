@@ -192,3 +192,10 @@ background-image: url("../../assets/images/start-screen-gradient-background.jpg"
         flex-direction: column;
     }
 }
+
+.flex-footer {
+    display: flex;
+    justify-content: space-between;
+    background-image: url('../../assets/images/footer-background.png');
+    
+}

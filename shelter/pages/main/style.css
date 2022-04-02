@@ -166,4 +166,10 @@
 .flex-donation div {
   display: flex;
   flex-direction: column;
+}
+
+.flex-footer {
+  display: flex;
+  justify-content: space-between;
+  background-image: url("../../assets/images/footer-background.png");
 }/*# sourceMappingURL=style.css.map */
