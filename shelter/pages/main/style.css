@@ -1,4 +1,12 @@
 @import "normalize.css";
+@font-face {
+  font-family: Arial, Verdana, sans-serif;
+  src: url(../../assets/fonts/arial/arial-regular.ttf);
+}
+@font-face {
+  font-family: "Georgia", "Garamond", serif;
+  src: url(../../assets/fonts/georgia/georgia-regular.ttf);
+}
 * {
   box-sizing: border-box;
 }
@@ -31,6 +39,8 @@
   color: #F1CDB3;
   font-weight: 400;
   font-family: "Georgia", "Garamond", serif;
+  line-height: 35px;
+  letter-spacing: 0.06em;
 }
 .flex-container > div span {
   padding-bottom: 60px;
@@ -38,6 +48,8 @@
   font-family: "Arial", "Verdana", sans-serif;
   font-weight: 400;
   color: #FFFFFF;
+  line-height: 15px;
+  letter-spacing: 0.1em;
 }
 
 .navigation ul {
@@ -50,6 +62,9 @@
 .navigation ul li {
   padding-right: 35px;
   color: #CDCDCD;
+  font-family: "Arial", "Verdana", sans-serif;
+  font-weight: 400;
+  line-height: 24px;
 }
 .navigation ul li:first-child {
   text-decoration: underline;
@@ -67,30 +82,50 @@
   background-repeat: no-repeat;
 }
 
+.text-title-first {
+  padding-top: 163px;
+}
+
 .flex-section-with-pic {
   display: flex;
   background-image: url("../../assets/images/main_foto.png");
+  background-repeat: no-repeat;
 }
 .flex-section-with-pic div h2 {
   margin: 0;
   font-family: "Georgia", "Garamond", serif;
   font-size: 44px;
   color: #FFFFFF;
+  line-height: 57px;
+  font-weight: 400;
 }
 .flex-section-with-pic div p {
+  margin: 0;
   font-family: "Arial", "Verdana", sans-serif;
   font-size: 15px;
   color: #CDCDCD;
   line-height: 24px;
 }
 
+.paragraph-section-with-pic {
+  padding-top: 42px;
+}
+
 .button {
-  padding-bottom: 350px;
+  padding-top: 42px;
+  padding-bottom: 243px;
 }
 .button button {
   background: #F1CDB3;
   border-radius: 100px;
   padding: 15px 45px;
+  font-size: 17px;
+  letter-spacing: 0.06em;
+  line-height: 22px;
+}
+
+.title-about-shelter {
+  padding-top: 14px;
 }
 
 .flex {
@@ -98,47 +133,175 @@
   justify-content: center;
   gap: 120px;
   padding-top: 80px;
+  margin-bottom: 100px;
 }
 .flex h2 {
   margin: 0;
   font-family: "Georgia", "Garamond", serif;
   font-size: 35px;
   font-weight: 400;
+  line-height: 45px;
+  color: #545454;
+  letter-spacing: 0.06em;
 }
 .flex p {
+  margin: 0;
+  font-family: "Arial", "Verdana", sans-serif;
+  font-weight: 400;
   font-size: 15px;
   line-height: 24px;
   color: #4C4C4C;
 }
 
+.title-about-with-padding {
+  padding-bottom: 25px;
+}
+
 .padding-from-text {
-  padding-bottom: 10px;
+  padding-bottom: 25px;
+}
+
+.background-pets {
+  background: #F6F6F6;
 }
 
 .our-friends h2 {
   text-align: center;
+  margin: 0;
+  font-family: "Georgia", "Garamond", serif;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 45px;
+  color: #545454;
+  letter-spacing: 0.06em;
+}
+
+.title-our-friends {
+  padding-top: 80px;
+}
+
+.title-our-friends-second {
+  padding-bottom: 60px;
 }
 
 .flex-our-friends {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 90px;
+  padding-bottom: 90px;
 }
-.flex-our-friends > div {
+
+.wrapper-card-katrine {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+}
+.wrapper-card-katrine span {
+  padding-top: 30px;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+}
+.wrapper-card-katrine div {
+  padding-top: 30px;
+}
+.wrapper-card-katrine div button {
+  padding: 15px 45px;
+  border: 2px solid #F1CDB3;
+  border-radius: 100px;
+}
+
+.wrapper-card-jennifer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper-card-jennifer span {
+  padding-top: 30px;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+}
+.wrapper-card-jennifer div {
+  padding-top: 30px;
+}
+.wrapper-card-jennifer div button {
+  padding: 15px 45px;
+  border: 2px solid #F1CDB3;
+  border-radius: 100px;
+}
+
+.wrapper-card-woody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper-card-woody span {
+  padding-top: 30px;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+}
+.wrapper-card-woody div {
+  padding-top: 30px;
+}
+.wrapper-card-woody div button {
+  padding: 15px 45px;
+  border: 2px solid #F1CDB3;
+  border-radius: 100px;
+}
+
+.button-arrow {
+  border-radius: 100%;
+  border: 2px solid #F1CDB3;
 }
 
 .button-other-pets {
   display: flex;
   justify-content: center;
+  padding-bottom: 100px;
+}
+
+.button-rest-pets {
+  border-radius: 100px;
+  padding: 15px 45px;
+  background: #F1CDB3;
+  border: none;
+  font-family: "Georgia", "Garamond", serif;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.06em;
+  color: #292929;
+}
+
+.title-helps-our-shelters {
+  padding-top: 80px;
+}
+
+.title-helps-our-second {
+  padding-bottom: 60px;
+}
+
+.helps-our-shelters h2 {
+  margin: 0;
+  text-align: center;
+  font-family: "Georgia", "Garamond", serif;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 45px;
+  color: #545454;
+  letter-spacing: 0.06em;
 }
 
 .flex-cards-first-string {
   display: flex;
   justify-content: center;
   gap: 120px;
+  padding-bottom: 55px;
 }
 .flex-cards-first-string div {
   display: flex;
@@ -146,11 +309,20 @@
   justify-content: center;
   align-items: center;
 }
+.flex-cards-first-string div span {
+  padding-top: 30px;
+  font-family: "Georgia", "Garamond", serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+}
 
 .flex-cards-second-string {
   display: flex;
   justify-content: center;
   gap: 120px;
+  padding-bottom: 100px;
 }
 .flex-cards-second-string div {
   display: flex;
@@ -158,18 +330,188 @@
   justify-content: center;
   align-items: center;
 }
+.flex-cards-second-string div span {
+  padding-top: 30px;
+  font-family: "Georgia", "Garamond", serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+}
+
+.title-donations-second {
+  padding-bottom: 20px;
+}
+
+.background-donation {
+  background: #F6F6F6;
+}
 
 .flex-donation {
   display: flex;
   justify-content: center;
+  padding-top: 80px;
+  padding-bottom: 100px;
+  gap: 30px;
+}
+.flex-donation img {
+  padding-top: 11px;
 }
 .flex-donation div {
   display: flex;
   flex-direction: column;
 }
+.flex-donation h2 {
+  margin: 0;
+  font-family: "Georgia", "Garamond", serif;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 45px;
+  color: #545454;
+  letter-spacing: 0.06em;
+}
+.flex-donation input {
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 9px;
+  background: #F1CDB3;
+  padding: 10px 15px;
+  font-family: "Georgia", "Garamond", serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+}
+
+.bank-name {
+  font-family: "Georgia", "Garamond", serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 17px;
+  letter-spacing: 0.06em;
+  padding-bottom: 20px;
+}
+
+.bank-information {
+  font-family: "Arial", "Verdana", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.background-footer {
+  background-image: url("../../assets/images/footer-background.png");
+}
 
 .flex-footer {
   display: flex;
   justify-content: space-between;
-  background-image: url("../../assets/images/footer-background.png");
+  gap: 160px;
+  padding-top: 40px;
+}
+.flex-footer > div h2 {
+  margin: 0;
+  font-family: "Georgia", "Garamond", serif;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 45px;
+  color: #FFFFFF;
+  letter-spacing: 0.06em;
+}
+
+.title-question-chapter-second {
+  padding-bottom: 40px;
+}
+
+.wrapper-icon-mail {
+  display: flex;
+  align-items: center;
+  padding-bottom: 40px;
+}
+.wrapper-icon-mail img {
+  padding-right: 20px;
+}
+.wrapper-icon-mail a {
+  color: #F1CDB3;
+  text-decoration: none;
+  font-family: "Georgia", "Garamond", serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  color: #F1CDB3;
+  letter-spacing: 0.06em;
+}
+
+.wrapper-icon-tel {
+  display: flex;
+  align-items: center;
+  padding-bottom: 40px;
+}
+.wrapper-icon-tel img {
+  padding-right: 20px;
+}
+.wrapper-icon-tel a {
+  color: #F1CDB3;
+  text-decoration: none;
+  font-family: "Georgia", "Garamond", serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  color: #F1CDB3;
+  letter-spacing: 0.06em;
+}
+
+.wrapper-text-location {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.wrapper-text-location a {
+  padding-right: 20px;
+}
+.wrapper-text-location span {
+  font-family: "Georgia", "Garamond", serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  color: #F1CDB3;
+  letter-spacing: 0.06em;
+}
+
+.title-location-chapter-second {
+  padding-bottom: 34px;
+}
+
+.location-Boston {
+  display: flex;
+  align-items: center;
+}
+.location-Boston a {
+  padding-right: 20px;
+}
+.location-Boston p {
+  margin: 0;
+  font-family: "Georgia", "Garamond", serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  color: #F1CDB3;
+  letter-spacing: 0.06em;
+}
+
+.location-London {
+  display: flex;
+  align-items: center;
+}
+.location-London a {
+  padding-right: 20px;
+}
+.location-London span {
+  font-family: "Georgia", "Garamond", serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  color: #F1CDB3;
+  letter-spacing: 0.06em;
 }/*# sourceMappingURL=style.css.map */
