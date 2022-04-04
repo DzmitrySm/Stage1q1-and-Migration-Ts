@@ -28,6 +28,10 @@ $line-heigth-24: 24px;
     box-sizing: border-box;
   }
 
+  html {
+      scroll-behavior: smooth;
+  }
+
 .header {
     background: url('../../assets/images/start-screen-gradient-background.jpg');
     background-repeat: no-repeat;
@@ -79,10 +83,6 @@ $line-heigth-24: 24px;
         list-style: none;
         li {
             padding-right: 35px;
-            color: $color-not-selected-nav;
-            font-family: $font-family-arial;
-            font-weight: $font-normal;
-            line-height: 24px;
             &:first-child {
                 text-decoration: underline;
                 text-decoration-color: $title-shelter-color;
@@ -91,6 +91,18 @@ $line-heigth-24: 24px;
             &:last-child {
                 padding: 0;
             }
+            a {
+            color: $color-not-selected-nav;
+            font-family: $font-family-arial;
+            font-weight: $font-normal;
+            line-height: 24px;
+            text-decoration: none;
+            transition: .3s;
+            &:hover {
+                color: #FAFAFA;
+            }
+            }
+            
         }
     }
 }
