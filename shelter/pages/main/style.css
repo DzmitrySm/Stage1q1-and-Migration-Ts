@@ -40,6 +40,9 @@ html {
   padding-top: 60px;
   padding-bottom: 10px;
   margin: 0;
+}
+.flex-container > div h1 a {
+  text-decoration: none;
   color: #F1CDB3;
   font-weight: 400;
   font-family: "Georgia", "Garamond", serif;
@@ -67,10 +70,16 @@ html {
   padding-right: 35px;
 }
 .navigation ul li:first-child {
-  text-decoration: underline;
-  -webkit-text-decoration-color: #F1CDB3;
-          text-decoration-color: #F1CDB3;
+  position: relative;
   color: #FAFAFA;
+}
+.navigation ul li:first-child::after {
+  content: "";
+  position: absolute;
+  border: 1px solid #F1CDB3;
+  width: 114px;
+  bottom: -3px;
+  right: 35px;
 }
 .navigation ul li:last-child {
   padding: 0;
@@ -82,6 +91,7 @@ html {
   line-height: 24px;
   text-decoration: none;
   transition: 0.3s;
+  font-size: 15px;
 }
 .navigation ul li a:hover {
   color: #FAFAFA;
@@ -99,8 +109,6 @@ html {
 
 .flex-section-with-pic {
   display: flex;
-  background-image: url("../../assets/images/main_foto.png");
-  background-repeat: no-repeat;
 }
 .flex-section-with-pic div h2 {
   margin: 0;
@@ -117,22 +125,36 @@ html {
   color: #CDCDCD;
   line-height: 24px;
 }
+.flex-section-with-pic div .padding-last-paragraph {
+  padding-bottom: 42px;
+}
+
+.main-doggy {
+  position: absolute;
+  left: calc(50% - 349px + 251px);
+}
 
 .paragraph-section-with-pic {
   padding-top: 42px;
 }
 
-.button {
-  padding-top: 42px;
-  padding-bottom: 243px;
-}
-.button button {
+.btn-coloured {
+  display: inline-block;
+  margin-bottom: 243px;
   background: #F1CDB3;
+  border: none;
   border-radius: 100px;
   padding: 15px 45px;
-  font-size: 17px;
+  font-family: "Georgia", "Garamond", serif;
   letter-spacing: 0.06em;
   line-height: 22px;
+  color: #292929;
+  font-size: 17px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.btn-coloured:hover {
+  background: #FDDCC4;
 }
 
 .title-about-shelter {
@@ -200,7 +222,7 @@ html {
   justify-content: center;
   align-items: center;
   gap: 90px;
-  padding-bottom: 90px;
+  padding-bottom: 60px;
 }
 
 .wrapper-card-katrine {
@@ -208,6 +230,7 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #FAFAFA;
 }
 .wrapper-card-katrine span {
   padding-top: 30px;
@@ -220,6 +243,7 @@ html {
 }
 .wrapper-card-katrine div button {
   padding: 15px 45px;
+  margin-bottom: 30px;
   border: 2px solid #F1CDB3;
   border-radius: 100px;
 }
@@ -229,6 +253,7 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #FAFAFA;
 }
 .wrapper-card-jennifer span {
   padding-top: 30px;
@@ -241,6 +266,7 @@ html {
 }
 .wrapper-card-jennifer div button {
   padding: 15px 45px;
+  margin-bottom: 30px;
   border: 2px solid #F1CDB3;
   border-radius: 100px;
 }
@@ -250,6 +276,7 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #FAFAFA;
 }
 .wrapper-card-woody span {
   padding-top: 30px;
@@ -262,13 +289,19 @@ html {
 }
 .wrapper-card-woody div button {
   padding: 15px 45px;
+  margin-bottom: 30px;
   border: 2px solid #F1CDB3;
   border-radius: 100px;
 }
 
 .button-arrow {
-  border-radius: 100%;
+  border-radius: 50%;
   border: 2px solid #F1CDB3;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .button-other-pets {
