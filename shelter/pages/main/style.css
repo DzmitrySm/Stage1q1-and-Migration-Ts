@@ -219,9 +219,8 @@ html {
 
 .flex-our-friends {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 90px;
   padding-bottom: 60px;
 }
 
@@ -230,7 +229,17 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-left: 53px;
+  margin-right: 90px;
   background-color: #FAFAFA;
+  transition: 0.3s;
+}
+.wrapper-card-katrine:hover {
+  cursor: pointer;
+}
+.wrapper-card-katrine:hover button {
+  cursor: pointer;
+  background-color: #FDDCC4;
 }
 .wrapper-card-katrine span {
   padding-top: 30px;
@@ -246,6 +255,16 @@ html {
   margin-bottom: 30px;
   border: 2px solid #F1CDB3;
   border-radius: 100px;
+  font-family: "Georgia", "Garamond", serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: 0.06em;
+  color: #292929;
+}
+.wrapper-card-katrine div button:hover {
+  cursor: pointer;
+  background-color: #FDDCC4;
 }
 
 .wrapper-card-jennifer {
@@ -253,7 +272,16 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-right: 90px;
   background-color: #FAFAFA;
+  transition: 0.3s;
+}
+.wrapper-card-jennifer:hover {
+  cursor: pointer;
+}
+.wrapper-card-jennifer:hover button {
+  cursor: pointer;
+  background-color: #FDDCC4;
 }
 .wrapper-card-jennifer span {
   padding-top: 30px;
@@ -269,6 +297,12 @@ html {
   margin-bottom: 30px;
   border: 2px solid #F1CDB3;
   border-radius: 100px;
+  font-family: "Georgia", "Garamond", serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: 0.06em;
+  color: #292929;
 }
 
 .wrapper-card-woody {
@@ -276,7 +310,16 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-right: 53px;
   background-color: #FAFAFA;
+  transition: 0.3s;
+}
+.wrapper-card-woody:hover {
+  cursor: pointer;
+}
+.wrapper-card-woody:hover button {
+  cursor: pointer;
+  background-color: #FDDCC4;
 }
 .wrapper-card-woody span {
   padding-top: 30px;
@@ -292,6 +335,12 @@ html {
   margin-bottom: 30px;
   border: 2px solid #F1CDB3;
   border-radius: 100px;
+  font-family: "Georgia", "Garamond", serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: 0.06em;
+  color: #292929;
 }
 
 .button-arrow {
@@ -302,6 +351,11 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.3s;
+}
+.button-arrow:hover {
+  cursor: pointer;
+  background-color: #FDDCC4;
 }
 
 .button-other-pets {
@@ -309,12 +363,21 @@ html {
   justify-content: center;
   padding-bottom: 100px;
 }
+.button-other-pets button:hover {
+  cursor: pointer;
+  background-color: #FDDCC4;
+}
 
 .button-rest-pets {
+  display: block;
   border-radius: 100px;
   padding: 15px 45px;
   background: #F1CDB3;
   border: none;
+  transition: 0.3s;
+}
+.button-rest-pets a {
+  text-decoration: none;
   font-family: "Georgia", "Garamond", serif;
   font-weight: 400;
   line-height: 22px;
@@ -343,9 +406,11 @@ html {
 
 .flex-cards-first-string {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 120px;
-  padding-bottom: 55px;
+  row-gap: 55px;
+  padding-bottom: 100px;
 }
 .flex-cards-first-string div {
   display: flex;
@@ -354,27 +419,6 @@ html {
   align-items: center;
 }
 .flex-cards-first-string div span {
-  padding-top: 30px;
-  font-family: "Georgia", "Garamond", serif;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 23px;
-  letter-spacing: 0.06em;
-}
-
-.flex-cards-second-string {
-  display: flex;
-  justify-content: center;
-  gap: 120px;
-  padding-bottom: 100px;
-}
-.flex-cards-second-string div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.flex-cards-second-string div span {
   padding-top: 30px;
   font-family: "Georgia", "Garamond", serif;
   font-weight: 400;
@@ -400,6 +444,7 @@ html {
 }
 .flex-donation img {
   padding-top: 11px;
+  padding-bottom: 10px;
 }
 .flex-donation div {
   display: flex;
@@ -412,18 +457,6 @@ html {
   font-weight: 400;
   line-height: 45px;
   color: #545454;
-  letter-spacing: 0.06em;
-}
-.flex-donation input {
-  margin-bottom: 20px;
-  border: none;
-  border-radius: 9px;
-  background: #F1CDB3;
-  padding: 10px 15px;
-  font-family: "Georgia", "Garamond", serif;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 23px;
   letter-spacing: 0.06em;
 }
 
@@ -464,8 +497,13 @@ html {
   letter-spacing: 0.06em;
 }
 
+.title-question-chapter {
+  padding-top: 16px;
+}
+
 .title-question-chapter-second {
   padding-bottom: 40px;
+  padding-top: 16px;
 }
 
 .wrapper-icon-mail {
@@ -485,6 +523,10 @@ html {
   line-height: 23px;
   color: #F1CDB3;
   letter-spacing: 0.06em;
+}
+
+.text-location {
+  padding-bottom: 32px;
 }
 
 .wrapper-icon-tel {
@@ -521,6 +563,10 @@ html {
   line-height: 23px;
   color: #F1CDB3;
   letter-spacing: 0.06em;
+}
+
+.title-location-chapter {
+  padding-top: 16px;
 }
 
 .title-location-chapter-second {
