@@ -21,6 +21,13 @@ html {
   padding: 0 40px;
 }
 
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #FFFFFF;
+}
+
 .flex-container {
   display: flex;
   justify-content: space-between;
@@ -34,18 +41,22 @@ html {
   padding-top: 30px;
   padding-bottom: 10px;
   margin: 0;
-  color: #F1CDB3;
+}
+.flex-container > div h1 a {
+  text-decoration: none;
+  color: #545454;
   font-weight: 400;
   font-family: "Georgia", "Garamond", serif;
   line-height: 35px;
   letter-spacing: 0.06em;
+  font-size: 32px;
 }
 .flex-container > div span {
   padding-bottom: 30px;
   font-size: 13px;
   font-family: "Arial", "Verdana", sans-serif;
   font-weight: 400;
-  color: #292929;
+  color: #545454;
   line-height: 15px;
   letter-spacing: 0.1em;
 }
@@ -53,7 +64,7 @@ html {
 .navigation ul {
   display: flex;
   padding-top: 46px;
-  padding-bottom: 47px;
+  padding-bottom: 20px;
   margin: 0;
   list-style: none;
 }
@@ -61,10 +72,16 @@ html {
   padding-right: 35px;
 }
 .navigation ul li:nth-child(2) {
-  text-decoration: underline;
-  -webkit-text-decoration-color: #F1CDB3;
-          text-decoration-color: #F1CDB3;
+  position: relative;
   color: #FAFAFA;
+}
+.navigation ul li:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  border: 1px solid #F1CDB3;
+  width: 58px;
+  bottom: -3px;
+  right: 35px;
 }
 .navigation ul li:last-child {
   padding: 0;
@@ -76,9 +93,14 @@ html {
   line-height: 24px;
   text-decoration: none;
   transition: 0.3s;
+  font-size: 15px;
 }
 .navigation ul li a:hover {
   color: #FAFAFA;
+}
+
+.background-section {
+  background-color: #F6F6F6;
 }
 
 .our-friends h2 {
@@ -93,11 +115,11 @@ html {
 }
 
 .title-our-friends {
-  padding-top: 80px;
+  padding-top: 200px;
 }
 
 .title-our-friends-second {
-  padding-bottom: 60px;
+  padding-bottom: 45px;
 }
 
 .flex-our-friends {
@@ -106,7 +128,9 @@ html {
   justify-content: center;
   align-items: center;
   gap: 40px;
-  padding-bottom: 90px;
+  row-gap: 30px;
+  padding-top: 15px;
+  padding-bottom: 100px;
 }
 
 .wrapper-card-katrine {
@@ -114,6 +138,18 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 435px;
+  background-color: #FAFAFA;
+  border-radius: 9px;
+  transition: 0.3s;
+}
+.wrapper-card-katrine:hover {
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+.wrapper-card-katrine:hover button {
+  cursor: pointer;
+  background-color: #FDDCC4;
 }
 .wrapper-card-katrine span {
   padding-top: 30px;
@@ -126,8 +162,19 @@ html {
 }
 .wrapper-card-katrine div button {
   padding: 15px 45px;
+  margin-bottom: 30px;
   border: 2px solid #F1CDB3;
   border-radius: 100px;
+  font-family: "Georgia", "Garamond", serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: 0.06em;
+  color: #292929;
+}
+.wrapper-card-katrine div button:hover {
+  cursor: pointer;
+  background-color: #FDDCC4;
 }
 
 .wrapper-card-jennifer {
@@ -135,6 +182,18 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 435px;
+  background-color: #FAFAFA;
+  border-radius: 9px;
+  transition: 0.3s;
+}
+.wrapper-card-jennifer:hover {
+  cursor: pointer;
+  background-color: #FFFFFF;
+}
+.wrapper-card-jennifer:hover button {
+  cursor: pointer;
+  background-color: #FDDCC4;
 }
 .wrapper-card-jennifer span {
   padding-top: 30px;
@@ -147,8 +206,15 @@ html {
 }
 .wrapper-card-jennifer div button {
   padding: 15px 45px;
+  margin-bottom: 30px;
   border: 2px solid #F1CDB3;
   border-radius: 100px;
+  font-family: "Georgia", "Garamond", serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: 0.06em;
+  color: #292929;
 }
 
 .wrapper-card-woody {
@@ -156,6 +222,18 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 435px;
+  background-color: #FAFAFA;
+  border-radius: 9px;
+  transition: 0.3s;
+}
+.wrapper-card-woody:hover {
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+.wrapper-card-woody:hover button {
+  cursor: pointer;
+  background-color: #FDDCC4;
 }
 .wrapper-card-woody span {
   padding-top: 30px;
@@ -168,8 +246,15 @@ html {
 }
 .wrapper-card-woody div button {
   padding: 15px 45px;
+  margin-bottom: 30px;
   border: 2px solid #F1CDB3;
   border-radius: 100px;
+  font-family: "Georgia", "Garamond", serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: 0.06em;
+  color: #292929;
 }
 
 .wrapper-card-sophia {
@@ -177,6 +262,18 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 435px;
+  background-color: #FAFAFA;
+  border-radius: 9px;
+  transition: 0.3s;
+}
+.wrapper-card-sophia:hover {
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+.wrapper-card-sophia:hover button {
+  cursor: pointer;
+  background-color: #FDDCC4;
 }
 .wrapper-card-sophia span {
   padding-top: 30px;
@@ -189,8 +286,15 @@ html {
 }
 .wrapper-card-sophia div button {
   padding: 15px 45px;
+  margin-bottom: 30px;
   border: 2px solid #F1CDB3;
   border-radius: 100px;
+  font-family: "Georgia", "Garamond", serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: 0.06em;
+  color: #292929;
 }
 
 .wrapper-card-timmy {
@@ -198,6 +302,19 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 435px;
+  margin-bottom: 15px;
+  background-color: #FAFAFA;
+  border-radius: 9px;
+  transition: 0.3s;
+}
+.wrapper-card-timmy:hover {
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+.wrapper-card-timmy:hover button {
+  cursor: pointer;
+  background-color: #FDDCC4;
 }
 .wrapper-card-timmy span {
   padding-top: 30px;
@@ -210,8 +327,15 @@ html {
 }
 .wrapper-card-timmy div button {
   padding: 15px 45px;
+  margin-bottom: 30px;
   border: 2px solid #F1CDB3;
   border-radius: 100px;
+  font-family: "Georgia", "Garamond", serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: 0.06em;
+  color: #292929;
 }
 
 .wrapper-card-charly {
@@ -219,6 +343,19 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 435px;
+  margin-bottom: 15px;
+  background-color: #FAFAFA;
+  border-radius: 9px;
+  transition: 0.3s;
+}
+.wrapper-card-charly:hover {
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+.wrapper-card-charly:hover button {
+  cursor: pointer;
+  background-color: #FDDCC4;
 }
 .wrapper-card-charly span {
   padding-top: 30px;
@@ -231,8 +368,15 @@ html {
 }
 .wrapper-card-charly div button {
   padding: 15px 45px;
+  margin-bottom: 30px;
   border: 2px solid #F1CDB3;
   border-radius: 100px;
+  font-family: "Georgia", "Garamond", serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: 0.06em;
+  color: #292929;
 }
 
 .wrapper-card-scarlett {
@@ -240,6 +384,19 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 435px;
+  margin-bottom: 15px;
+  background-color: #FAFAFA;
+  border-radius: 9px;
+  transition: 0.3s;
+}
+.wrapper-card-scarlett:hover {
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+.wrapper-card-scarlett:hover button {
+  cursor: pointer;
+  background-color: #FDDCC4;
 }
 .wrapper-card-scarlett span {
   padding-top: 30px;
@@ -252,8 +409,15 @@ html {
 }
 .wrapper-card-scarlett div button {
   padding: 15px 45px;
+  margin-bottom: 30px;
   border: 2px solid #F1CDB3;
   border-radius: 100px;
+  font-family: "Georgia", "Garamond", serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: 0.06em;
+  color: #292929;
 }
 
 .wrapper-card-freddie {
@@ -261,6 +425,19 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 435px;
+  margin-bottom: 15px;
+  background-color: #FAFAFA;
+  border-radius: 9px;
+  transition: 0.3s;
+}
+.wrapper-card-freddie:hover {
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+.wrapper-card-freddie:hover button {
+  cursor: pointer;
+  background-color: #FDDCC4;
 }
 .wrapper-card-freddie span {
   padding-top: 30px;
@@ -273,8 +450,45 @@ html {
 }
 .wrapper-card-freddie div button {
   padding: 15px 45px;
+  margin-bottom: 30px;
   border: 2px solid #F1CDB3;
   border-radius: 100px;
+  font-family: "Georgia", "Garamond", serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: 0.06em;
+  color: #292929;
+}
+
+.button-pagination-menu {
+  border-radius: 50%;
+  border: 2px solid #F1CDB3;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+.button-pagination-menu:hover {
+  cursor: pointer;
+  background-color: #FDDCC4;
+}
+
+.no-border-button {
+  border: none;
+  background-color: #F1CDB3;
+}
+
+.border-grey-button {
+  border-color: #CDCDCD;
+}
+
+.wrapper-pagination {
+  display: flex;
+  gap: 20px;
+  padding-top: 15px;
 }
 
 .background-footer {
@@ -284,10 +498,8 @@ html {
 .flex-footer {
   display: flex;
   justify-content: space-between;
-  gap: 160px;
   padding-top: 40px;
 }
-
 .flex-footer > div h2 {
   margin: 0;
   font-family: "Georgia", "Garamond", serif;
@@ -298,8 +510,17 @@ html {
   letter-spacing: 0.06em;
 }
 
+.title-question-chapter {
+  padding-top: 16px;
+}
+
 .title-question-chapter-second {
   padding-bottom: 40px;
+}
+
+.question-content {
+  display: flex;
+  flex-direction: column;
 }
 
 .wrapper-icon-mail {
@@ -307,11 +528,9 @@ html {
   align-items: center;
   padding-bottom: 40px;
 }
-
 .wrapper-icon-mail img {
   padding-right: 20px;
 }
-
 .wrapper-icon-mail a {
   color: #F1CDB3;
   text-decoration: none;
@@ -328,11 +547,9 @@ html {
   align-items: center;
   padding-bottom: 40px;
 }
-
 .wrapper-icon-tel img {
   padding-right: 20px;
 }
-
 .wrapper-icon-tel a {
   color: #F1CDB3;
   text-decoration: none;
@@ -347,37 +564,43 @@ html {
 .wrapper-text-location {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
-
 .wrapper-text-location a {
   padding-right: 20px;
 }
-
-.wrapper-text-location span {
+.wrapper-text-location span a {
   font-family: "Georgia", "Garamond", serif;
   font-size: 20px;
   font-weight: 400;
   line-height: 23px;
   color: #F1CDB3;
   letter-spacing: 0.06em;
+  text-decoration: none;
+}
+
+.title-location-chapter {
+  padding-top: 16px;
 }
 
 .title-location-chapter-second {
   padding-bottom: 34px;
 }
 
+.location-content {
+  display: flex;
+  flex-direction: column;
+}
+
 .location-Boston {
   display: flex;
   align-items: center;
+  padding-bottom: 32px;
 }
-
 .location-Boston a {
   padding-right: 20px;
 }
-
-.location-Boston p {
-  margin: 0;
+.location-Boston span {
   font-family: "Georgia", "Garamond", serif;
   font-size: 20px;
   font-weight: 400;
@@ -390,12 +613,11 @@ html {
   display: flex;
   align-items: center;
 }
-
 .location-London a {
   padding-right: 20px;
 }
-
-.location-London span {
+.location-London span a {
+  text-decoration: none;
   font-family: "Georgia", "Garamond", serif;
   font-size: 20px;
   font-weight: 400;

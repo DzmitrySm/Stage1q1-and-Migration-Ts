@@ -48,6 +48,7 @@ html {
   font-family: "Georgia", "Garamond", serif;
   line-height: 35px;
   letter-spacing: 0.06em;
+  font-size: 32px;
 }
 .flex-container > div span {
   padding-bottom: 60px;
@@ -62,7 +63,7 @@ html {
 .navigation ul {
   display: flex;
   padding-top: 76px;
-  padding-bottom: 17px;
+  padding-bottom: 20px;
   margin: 0;
   list-style: none;
 }
@@ -186,6 +187,10 @@ html {
   color: #4C4C4C;
 }
 
+.container-image {
+  height: 408px;
+}
+
 .title-about-with-padding {
   padding-bottom: 25px;
 }
@@ -229,12 +234,15 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 435px;
   margin-left: 53px;
   margin-right: 90px;
   background-color: #FAFAFA;
+  border-radius: 9px;
   transition: 0.3s;
 }
 .wrapper-card-katrine:hover {
+  background-color: #FFFFFF;
   cursor: pointer;
 }
 .wrapper-card-katrine:hover button {
@@ -272,12 +280,15 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 435px;
   margin-right: 90px;
   background-color: #FAFAFA;
+  border-radius: 9px;
   transition: 0.3s;
 }
 .wrapper-card-jennifer:hover {
   cursor: pointer;
+  background-color: #FFFFFF;
 }
 .wrapper-card-jennifer:hover button {
   cursor: pointer;
@@ -310,11 +321,14 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 435px;
   margin-right: 53px;
   background-color: #FAFAFA;
+  border-radius: 9px;
   transition: 0.3s;
 }
 .wrapper-card-woody:hover {
+  background-color: #FFFFFF;
   cursor: pointer;
 }
 .wrapper-card-woody:hover button {
@@ -363,20 +377,23 @@ html {
   justify-content: center;
   padding-bottom: 100px;
 }
-.button-other-pets button:hover {
-  cursor: pointer;
-  background-color: #FDDCC4;
-}
-
-.button-rest-pets {
-  display: block;
+.button-other-pets a {
+  display: inline-block;
   border-radius: 100px;
   padding: 15px 45px;
   background: #F1CDB3;
   border: none;
   transition: 0.3s;
+  text-decoration: none;
+  font-family: "Georgia", "Garamond", serif;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.06em;
+  color: #292929;
 }
-.button-rest-pets a {
+.button-other-pets a:hover {
+  cursor: pointer;
+  background-color: #FDDCC4;
   text-decoration: none;
   font-family: "Georgia", "Garamond", serif;
   font-weight: 400;
@@ -446,7 +463,7 @@ html {
   padding-top: 11px;
   padding-bottom: 10px;
 }
-.flex-donation div {
+.flex-donation .donation-content {
   display: flex;
   flex-direction: column;
 }
@@ -457,6 +474,32 @@ html {
   font-weight: 400;
   line-height: 45px;
   color: #545454;
+  letter-spacing: 0.06em;
+}
+
+.wrapper-for-bank-card {
+  display: flex;
+  align-items: center;
+  border-radius: 9px;
+  background-color: #F1CDB3;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+.wrapper-for-bank-card:hover {
+  background-color: #FDDCC4;
+  cursor: pointer;
+}
+.wrapper-for-bank-card img {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.wrapper-for-bank-card a {
+  text-decoration: none;
+  color: #545454;
+  font-family: "Georgia", "Garamond", serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
   letter-spacing: 0.06em;
 }
 
@@ -484,7 +527,6 @@ html {
 .flex-footer {
   display: flex;
   justify-content: space-between;
-  gap: 160px;
   padding-top: 40px;
 }
 .flex-footer > div h2 {
@@ -503,7 +545,11 @@ html {
 
 .title-question-chapter-second {
   padding-bottom: 40px;
-  padding-top: 16px;
+}
+
+.question-content {
+  display: flex;
+  flex-direction: column;
 }
 
 .wrapper-icon-mail {
@@ -523,10 +569,6 @@ html {
   line-height: 23px;
   color: #F1CDB3;
   letter-spacing: 0.06em;
-}
-
-.text-location {
-  padding-bottom: 32px;
 }
 
 .wrapper-icon-tel {
@@ -551,18 +593,19 @@ html {
 .wrapper-text-location {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 .wrapper-text-location a {
   padding-right: 20px;
 }
-.wrapper-text-location span {
+.wrapper-text-location span a {
   font-family: "Georgia", "Garamond", serif;
   font-size: 20px;
   font-weight: 400;
   line-height: 23px;
   color: #F1CDB3;
   letter-spacing: 0.06em;
+  text-decoration: none;
 }
 
 .title-location-chapter {
@@ -573,15 +616,20 @@ html {
   padding-bottom: 34px;
 }
 
+.location-content {
+  display: flex;
+  flex-direction: column;
+}
+
 .location-Boston {
   display: flex;
   align-items: center;
+  padding-bottom: 32px;
 }
 .location-Boston a {
   padding-right: 20px;
 }
-.location-Boston p {
-  margin: 0;
+.location-Boston span {
   font-family: "Georgia", "Garamond", serif;
   font-size: 20px;
   font-weight: 400;
@@ -597,7 +645,8 @@ html {
 .location-London a {
   padding-right: 20px;
 }
-.location-London span {
+.location-London span a {
+  text-decoration: none;
   font-family: "Georgia", "Garamond", serif;
   font-size: 20px;
   font-weight: 400;

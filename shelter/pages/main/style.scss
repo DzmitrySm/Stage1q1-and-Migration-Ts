@@ -65,6 +65,7 @@ $line-heigth-24: 24px;
                     font-family:$font-family-georgia;
                     line-height: 35px;
                     letter-spacing: 0.06em;
+                    font-size: 32px;
                 }
         }
         span {
@@ -83,7 +84,7 @@ $line-heigth-24: 24px;
     ul {
         display: flex;
         padding-top: 76px;
-        padding-bottom: 17px;
+        padding-bottom: 20px;
         margin: 0;
         list-style: none;
         li {
@@ -222,6 +223,10 @@ $line-heigth-24: 24px;
     
 }
 
+.container-image{
+    height: 408px;
+}
+
 .title-about-with-padding {
     padding-bottom: 25px;
 }
@@ -269,11 +274,14 @@ $line-heigth-24: 24px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 435px;
     margin-left: 53px;
     margin-right: 90px;
     background-color:$background-cards;
+    border-radius: 9px;
     transition: .3s;
     &:hover{
+        background-color: #FFFFFF;
         cursor:pointer;
         button {
             cursor: pointer;
@@ -298,7 +306,7 @@ $line-heigth-24: 24px;
             font-size: 17px;
             line-height: 22px;
             letter-spacing: 0.06em;
-           color:$color-button;
+            color:$color-button;
            &:hover {
             cursor: pointer;
             background-color:$color-hover-btn;
@@ -312,11 +320,14 @@ $line-heigth-24: 24px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 435px;
     margin-right: 90px;
     background-color:$background-cards;
+    border-radius: 9px;
     transition: .3s;
     &:hover{
         cursor:pointer;
+        background-color: #FFFFFF;
         button {
             cursor: pointer;
             background-color:$color-hover-btn;
@@ -350,10 +361,13 @@ $line-heigth-24: 24px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 435px;
     margin-right: 53px;
     background-color:$background-cards;
+    border-radius: 9px;
     transition: .3s;
     &:hover{
+        background-color: #FFFFFF;
         cursor:pointer;
         button {
             cursor: pointer;
@@ -402,30 +416,36 @@ $line-heigth-24: 24px;
     display: flex;
     justify-content: center;
     padding-bottom: 100px;
-    button:hover {
-        cursor: pointer;
-        background-color:$color-hover-btn;  
-    }
-}
-
-.button-rest-pets {
-    display: block;
+    a{
+    display: inline-block;
     border-radius: 100px;
     padding: 15px 45px;
     background: $title-shelter-color;
     border: none;
     transition: .3s;
-    a{
-        text-decoration: none;
+    text-decoration: none;
         font-family:$font-family-georgia;
     font-weight:$font-normal;
     line-height: 22px;
     letter-spacing: 0.06em;
     color:$color-button;
-    }
     
-      
+    }
+    a:hover {
+        cursor: pointer;
+        background-color:$color-hover-btn;
+        text-decoration: none;
+        font-family:$font-family-georgia;
+    font-weight:$font-normal;
+    line-height: 22px;
+    letter-spacing: 0.06em;
+    color:$color-button;  
+    }
 }
+
+ 
+      
+
 
 .title-helps-our-shelters {
     padding-top: 80px;
@@ -496,7 +516,7 @@ $line-heigth-24: 24px;
         padding-bottom: 10px;
 
     }
-    div {
+    .donation-content {
         display: flex;
         flex-direction: column;
     }
@@ -510,6 +530,32 @@ $line-heigth-24: 24px;
        letter-spacing: 0.06em;
     }
 
+}
+
+.wrapper-for-bank-card {
+    display: flex;
+    align-items: center;
+    border-radius: 9px;
+    background-color:$title-shelter-color;
+    margin-bottom: 20px;
+    transition: .3s;
+    &:hover {
+        background-color:$color-hover-btn;
+        cursor: pointer;
+    }
+    img{
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    a{
+        text-decoration: none;
+        color:$color-dark-section-name;
+        font-family:$font-family-georgia;
+        font-weight: $font-normal;
+        font-size: 20px;
+        line-height: 23px;
+        letter-spacing: 0.06em;
+    }
 }
 
 .bank-name {
@@ -536,7 +582,6 @@ line-height: 18px;
 .flex-footer {
     display: flex;
     justify-content: space-between;
-    gap: 160px;
     padding-top: 40px;
     > div {
         
@@ -558,7 +603,11 @@ line-height: 18px;
 
 .title-question-chapter-second {
     padding-bottom: 40px;
-    padding-top: 16px;
+}
+
+.question-content {
+    display: flex;
+    flex-direction: column;
 }
 
 .wrapper-icon-mail {
@@ -579,10 +628,6 @@ line-height: 18px;
        letter-spacing: 0.06em;
     }
 
-}
-
-.text-location {
-    padding-bottom: 32px;
 }
 
 .wrapper-icon-tel {
@@ -609,17 +654,22 @@ line-height: 18px;
 .wrapper-text-location{
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    flex-direction: column;
     a {
         padding-right: 20px;
     }
     span {
-       font-family: $font-family-georgia;
-       font-size: 20px;
-       font-weight: $font-normal;
-       line-height: 23px;
-       color:$title-shelter-color;
-       letter-spacing: 0.06em;
+       
+       a{
+        font-family: $font-family-georgia;
+        font-size: 20px;
+        font-weight: $font-normal;
+        line-height: 23px;
+        color:$title-shelter-color;
+        letter-spacing: 0.06em;
+        text-decoration: none;
+
+       }
 
     }
 }
@@ -632,14 +682,19 @@ line-height: 18px;
     padding-bottom: 34px;
 }
 
+.location-content {
+    display: flex;
+    flex-direction: column;
+}
+
 .location-Boston {
     display: flex;
     align-items: center;
+    padding-bottom: 32px;
     a {
         padding-right: 20px;
     }
-    p{
-        margin: 0;
+    span{
         font-family: $font-family-georgia;
        font-size: 20px;
        font-weight: $font-normal;
@@ -656,12 +711,16 @@ line-height: 18px;
         padding-right: 20px;
     }
     span {
-       font-family: $font-family-georgia;
-       font-size: 20px;
-       font-weight: $font-normal;
-       line-height: 23px;
-       color:$title-shelter-color;
-       letter-spacing: 0.06em;
+       a{
+        text-decoration: none;
+        font-family: $font-family-georgia;
+        font-size: 20px;
+        font-weight: $font-normal;
+        line-height: 23px;
+        color:$title-shelter-color;
+        letter-spacing: 0.06em;
+
+       }
 
     }
 }
