@@ -513,7 +513,18 @@ header {
 }
 
 .border-grey-button{
+    border-radius: 50%;
+    border: 2px solid #F1CDB3;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
     border-color:$color-not-selected-nav;
+    &:hover {
+        cursor: pointer; 
+    }  
 }
 
 .wrapper-pagination {

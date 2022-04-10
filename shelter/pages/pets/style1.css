@@ -482,7 +482,18 @@ header {
 }
 
 .border-grey-button {
+  border-radius: 50%;
+  border: 2px solid #F1CDB3;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
   border-color: #CDCDCD;
+}
+.border-grey-button:hover {
+  cursor: pointer;
 }
 
 .wrapper-pagination {
