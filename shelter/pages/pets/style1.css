@@ -130,7 +130,7 @@ header {
   gap: 40px;
   row-gap: 30px;
   padding-top: 15px;
-  padding-bottom: 100px;
+  padding-bottom: 45px;
 }
 
 .wrapper-card-katrine {
@@ -498,8 +498,10 @@ header {
 
 .wrapper-pagination {
   display: flex;
+  justify-content: center;
   gap: 20px;
   padding-top: 15px;
+  padding-bottom: 100px;
 }
 
 .background-footer {
@@ -635,4 +637,42 @@ header {
   line-height: 23px;
   color: #F1CDB3;
   letter-spacing: 0.06em;
+}
+
+@media screen and (max-width: 1279px) {
+  .container {
+    max-width: 1279px;
+    padding: 0 30px;
+  }
+
+  .flex-container > div h1 {
+    padding-top: 30px;
+  }
+  .flex-container > div span {
+    padding-bottom: 0;
+  }
+
+  .flex-footer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    -moz-column-gap: 60px;
+         column-gap: 60px;
+    padding-top: 40px;
+  }
+
+  .background-footer {
+    background-image: url("../../assets/images/footer-background.png");
+    background-size: cover;
+  }
+
+  .wrapper-card-freddie {
+    position: absolute;
+    z-index: -9999;
+  }
+
+  .wrapper-card-scarlett {
+    position: absolute;
+    z-index: -9999;
+  }
 }/*# sourceMappingURL=style1.css.map */
