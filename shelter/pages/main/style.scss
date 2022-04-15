@@ -14,6 +14,7 @@ $font-size-15: 15px;
 $font-size-35: 35px;
 $color-dark: #4C4C4C;
 $line-heigth-24: 24px;
+$font-size-not-only-320: 25px;
 
 @font-face {
     font-family: Arial, Verdana, sans-serif;
@@ -35,10 +36,8 @@ $line-heigth-24: 24px;
       scroll-behavior: smooth;
   }
 
-.header {
-    background: url('../../assets/images/start-screen-gradient-background.jpg');
-    background-repeat: no-repeat;
-    background-position: center 0;
+.header-background {
+    background: url(../../assets/images/noise_transparent@2x.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #211F20;
 }
 
 .container {
@@ -50,7 +49,7 @@ $line-heigth-24: 24px;
 .flex-container {
     display: flex;
     justify-content: space-between;
-    >div {
+    .title-spans {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -123,19 +122,43 @@ $line-heigth-24: 24px;
     }
 }
 
-.section-with-pic {
-  background-image: url("../../assets/images/start-screen-gradient-background.jpg");
-  background-position: center -180px;
-  background-repeat: no-repeat;
-  
+.burger-menu {
+    display: none;
+    width: 30px;
+    height: 22px;
+    position: relative;
+    margin-top:auto;
+    margin-bottom: auto;
 }
 
+    .burger-line {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: $title-shelter-color;
+        left: 0;
+    }
+    
+    .burger-line-first {
+        top: 0;
+    }
+    
+    .burger-line-second {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .burger-line-third {
+        bottom: 0;
+    }
+    
 .text-title-first {
     padding-top: 163px;
 }
 
 .flex-section-with-pic {
     display: flex;
+    background: url(../../assets/images/noise_transparent@2x.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #211F20;
     
     div {
         h2 {
@@ -474,7 +497,7 @@ $line-heigth-24: 24px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 120px;
+    column-gap: 120px;
     row-gap: 55px;
     
     padding-bottom: 100px;
@@ -555,6 +578,7 @@ $line-heigth-24: 24px;
         font-size: 20px;
         line-height: 23px;
         letter-spacing: 0.06em;
+        
     }
 }
 
@@ -576,7 +600,7 @@ line-height: 18px;
 }
 
 .background-footer {
-    background-image: url('../../assets/images/footer-background.png');
+    background: url(../../assets/images/noise_transparent@2x.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #211F20;
 }
 
 .flex-footer {
@@ -733,15 +757,8 @@ line-height: 18px;
         padding: 0 30px;
    }
 
-   .header {
-    background-image: url('../../assets/images/start-screen-gradient-background.jpg');
-    background-repeat: no-repeat;
-    background-position: center 0;
-}
-
- 
    .flex-container {
-    >div {
+    .title-spans {
         h1 {
             padding-top: 30px;
         }
@@ -756,12 +773,6 @@ line-height: 18px;
         padding-top: 46px;
     }
 }
-
-.section-with-pic {
-    background-image: url("../../assets/images/start-screen-gradient-background.jpg");
-    background-position: center 100%; 
-    background-size: cover;
-  }
 
 .flex-section-with-pic {
     display: flex;
@@ -828,8 +839,8 @@ margin-right: 1.5%;
 
 .flex-cards-first-string {
     column-gap: 60px;
-    margin-left: 69px;
-    margin-right: 69px;
+    margin-left: 39px;
+    margin-right: 39px;
     &:nth-child(3n+1) {
         column-gap: 0;
     }
@@ -855,6 +866,7 @@ margin-right: 1.5%;
     .donation-content {
         display: flex;
         flex-direction: column;
+        width: 380px;
     }
     h2 {
         margin: 0;
@@ -879,12 +891,90 @@ img.image-pet {
     justify-content: center;
     flex-wrap: wrap;
     column-gap: 60px;
-    padding-top: 40px;
+    row-gap: 65px;
+    padding-top: 30px;
 }
 
-.background-footer {
-    background-image: url('../../assets/images/footer-background.png');
-    background-size: cover;
+.wrapper-icon-tel {
+    padding-bottom: 0;
+}
+
+.title-question-chapter {
+    padding-top: 0;
+}
+
+.title-location-chapter {
+    padding-top: 0;
 }
 
 }
+
+
+@media screen and (max-width: 767px) {
+
+    .container {
+        max-width: 767px;
+        padding: 0 10px;
+   }
+
+   .flex-section-with-pic {
+    div {
+        h2 {
+            text-align: center;
+            margin: 0;
+            font-family:$font-family-georgia;
+            font-size: $font-size-not-only-320;
+            line-height: 32px;
+        }
+    }
+}
+
+    .burger-menu {
+        display: block;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .wrapper-button {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 377px;
+        }
+
+    .main-doggy {
+        width: 260px;
+        height: 271.77px;
+        top: 551px;
+        }
+
+
+        .wrapper-card-jennifer {
+            display: none;
+        }
+
+        .image-pet {
+            width: 260px;
+            height: 135.2px;
+        }
+
+        .flex-cards-first-string {
+            column-gap: 30x;
+            margin-left: 10px;
+            margin-right: 10px;
+            div {
+                    flex-basis: 130px;
+                }
+        }
+
+        
+        .flex-footer {
+            > div {    
+                h2 {
+                    text-align: center;
+    
+    }
+}
+        }
+    }

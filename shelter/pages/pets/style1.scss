@@ -1,4 +1,4 @@
-@import "normalize.css";
+@import "../../pages/main/normalize.css";
 $title-shelter-color: #F1CDB3;
 $font-normal: 400;
 $font-family-georgia: "Georgia", "Garamond", serif;
@@ -536,7 +536,7 @@ header {
 }
 
 .background-footer {
-    background-image: url("../../assets/images/footer-background.png");
+    background: url(../../assets/images/noise_transparent@2x.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #211F20;
   }
   
   .flex-footer {
@@ -712,12 +712,6 @@ header {
         padding-top: 40px;
     }
     
-    .background-footer {
-        background-image: url('../../assets/images/footer-background.png');
-        background-size: cover;
-    }
-
-
     .wrapper-card-freddie {
     position: absolute;
     z-index: -9999;
