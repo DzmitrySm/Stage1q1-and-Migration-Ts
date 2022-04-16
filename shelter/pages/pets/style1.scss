@@ -14,6 +14,7 @@ $font-size-15: 15px;
 $font-size-35: 35px;
 $color-dark: #4C4C4C;
 $line-heigth-24: 24px;
+$color-burger-pets:#000000;
 
 @font-face {
     font-family: Arial, Verdana, sans-serif;
@@ -51,7 +52,7 @@ header {
 .flex-container {
    display: flex;
    justify-content: space-between;
-   >div {
+   .title-spans {
        display: flex;
        flex-direction: column;
        justify-content: center;
@@ -108,7 +109,7 @@ header {
                padding: 0;
            }
            a {
-           color: $color-not-selected-nav;
+           color: $color-button;
            font-family: $font-family-arial;
            font-weight: $font-normal;
            line-height: 24px;
@@ -123,6 +124,36 @@ header {
        }
    }
 }
+
+.burger-menu {
+    display: none;
+    width: 30px;
+    height: 22px;
+    position: relative;
+    margin-top:auto;
+    margin-bottom: auto;
+}
+
+    .burger-line {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: $color-burger-pets;
+        left: 0;
+    }
+    
+    .burger-line-first {
+        top: 0;
+    }
+    
+    .burger-line-second {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .burger-line-third {
+        bottom: 0;
+    }
 
 .background-section {
     background-color: $background-our-pets;
@@ -334,7 +365,6 @@ header {
     justify-content: center;
     align-items: center;
     height: 435px;
-    margin-bottom: 15px;
     background-color:$background-cards;
     border-radius: 9px;
     transition: .3s;
@@ -375,7 +405,6 @@ header {
     justify-content: center;
     align-items: center;
     height: 435px;
-    margin-bottom: 15px;
     background-color:$background-cards;
     border-radius: 9px;
     transition: .3s;
@@ -397,7 +426,6 @@ header {
         padding-top: 30px;
         button {
             padding: 15px 45px;
-            margin-bottom: 30px;
             border: 2px solid $title-shelter-color;
             border-radius: 100px;
             font-family:$font-family-georgia;
@@ -406,6 +434,7 @@ header {
             line-height: 22px;
             letter-spacing: 0.06em;
             color:$color-button;
+            margin-bottom: 30px;
         }
     }
 }
@@ -416,7 +445,6 @@ header {
     justify-content: center;
     align-items: center;
     height: 435px;
-    margin-bottom: 15px;
     background-color:$background-cards;
     border-radius: 9px;
     transition: .3s;
@@ -457,7 +485,6 @@ header {
     justify-content: center;
     align-items: center;
     height: 435px;
-    margin-bottom: 15px;
     background-color:$background-cards;
     border-radius: 9px;
     transition: .3s;
@@ -725,6 +752,102 @@ header {
 }
 
 }
+
+
+@media screen and (max-width: 767px) {
+
+.container {
+    max-width: 767px;
+    padding: 0 10px;
+   }
+
+.navigation {
+    display: none;
+}
+
+.burger-menu {
+    display: block;
+    margin-right: 43px;
+}
+
+.our-friends {
+    h2 { 
+        font-size: 25px;
+        line-height: 32.5px;
+     }
+ }
+
+
+
+
+.wrapper-pagination {
+    gap:10px;
+    padding-top: 0;
+    padding-bottom: 42px
+}
+
+.location-content {
+    padding-bottom: 40px;
+}
+
+.wrapper-card-sophia {
+    display: none;
+}
+
+.wrapper-card-timmy {
+    display: none;
+}
+
+.wrapper-card-scarlett {
+    display: none;
+}
+
+.wrapper-card-charly {
+    display: none;
+}
+
+.flex-our-friends {
+    padding-top: 0;
+    padding-bottom: 42px;
+}
+
+.title-our-friends {
+    padding-top:162px;
+}
+
+.title-our-friends-second {
+    padding-bottom: 42px;
+}
+
+
+.flex-footer {
+    padding-top: 30px;
+    > div { 
+        h2 {
+        text-align: center;  
+       font-size: 25px;
+       font-weight: $font-normal;
+       line-height: 32px;
+        }
+    };  
+}
+
+.title-question-chapter {
+    padding-top: 0;
+}
+
+.title-location-chapter {
+    padding-top: 0;
+}
+
+.image-dog-footer {
+    width: 260px;
+    height: 269px;
+}
+
+
+}
+   
 
 
 

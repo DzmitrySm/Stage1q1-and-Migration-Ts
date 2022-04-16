@@ -32,17 +32,17 @@ header {
   display: flex;
   justify-content: space-between;
 }
-.flex-container > div {
+.flex-container .title-spans {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.flex-container > div h1 {
+.flex-container .title-spans h1 {
   padding-top: 30px;
   padding-bottom: 10px;
   margin: 0;
 }
-.flex-container > div h1 a {
+.flex-container .title-spans h1 a {
   text-decoration: none;
   color: #545454;
   font-weight: 400;
@@ -51,7 +51,7 @@ header {
   letter-spacing: 0.06em;
   font-size: 32px;
 }
-.flex-container > div span {
+.flex-container .title-spans span {
   padding-bottom: 30px;
   font-size: 13px;
   font-family: "Arial", "Verdana", sans-serif;
@@ -87,7 +87,7 @@ header {
   padding: 0;
 }
 .navigation ul li a {
-  color: #CDCDCD;
+  color: #292929;
   font-family: "Arial", "Verdana", sans-serif;
   font-weight: 400;
   line-height: 24px;
@@ -97,6 +97,37 @@ header {
 }
 .navigation ul li a:hover {
   color: #FAFAFA;
+}
+
+.burger-menu {
+  display: none;
+  width: 30px;
+  height: 22px;
+  position: relative;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.burger-line {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #000000;
+  left: 0;
+}
+
+.burger-line-first {
+  top: 0;
+}
+
+.burger-line-second {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.burger-line-third {
+  bottom: 0;
 }
 
 .background-section {
@@ -303,7 +334,6 @@ header {
   justify-content: center;
   align-items: center;
   height: 435px;
-  margin-bottom: 15px;
   background-color: #FAFAFA;
   border-radius: 9px;
   transition: 0.3s;
@@ -344,7 +374,6 @@ header {
   justify-content: center;
   align-items: center;
   height: 435px;
-  margin-bottom: 15px;
   background-color: #FAFAFA;
   border-radius: 9px;
   transition: 0.3s;
@@ -368,7 +397,6 @@ header {
 }
 .wrapper-card-charly div button {
   padding: 15px 45px;
-  margin-bottom: 30px;
   border: 2px solid #F1CDB3;
   border-radius: 100px;
   font-family: "Georgia", "Garamond", serif;
@@ -377,6 +405,7 @@ header {
   line-height: 22px;
   letter-spacing: 0.06em;
   color: #292929;
+  margin-bottom: 30px;
 }
 
 .wrapper-card-scarlett {
@@ -385,7 +414,6 @@ header {
   justify-content: center;
   align-items: center;
   height: 435px;
-  margin-bottom: 15px;
   background-color: #FAFAFA;
   border-radius: 9px;
   transition: 0.3s;
@@ -426,7 +454,6 @@ header {
   justify-content: center;
   align-items: center;
   height: 435px;
-  margin-bottom: 15px;
   background-color: #FAFAFA;
   border-radius: 9px;
   transition: 0.3s;
@@ -669,5 +696,87 @@ header {
   .wrapper-card-scarlett {
     position: absolute;
     z-index: -9999;
+  }
+}
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: 767px;
+    padding: 0 10px;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .burger-menu {
+    display: block;
+    margin-right: 43px;
+  }
+
+  .our-friends h2 {
+    font-size: 25px;
+    line-height: 32.5px;
+  }
+
+  .wrapper-pagination {
+    gap: 10px;
+    padding-top: 0;
+    padding-bottom: 42px;
+  }
+
+  .location-content {
+    padding-bottom: 40px;
+  }
+
+  .wrapper-card-sophia {
+    display: none;
+  }
+
+  .wrapper-card-timmy {
+    display: none;
+  }
+
+  .wrapper-card-scarlett {
+    display: none;
+  }
+
+  .wrapper-card-charly {
+    display: none;
+  }
+
+  .flex-our-friends {
+    padding-top: 0;
+    padding-bottom: 42px;
+  }
+
+  .title-our-friends {
+    padding-top: 162px;
+  }
+
+  .title-our-friends-second {
+    padding-bottom: 42px;
+  }
+
+  .flex-footer {
+    padding-top: 30px;
+  }
+  .flex-footer > div h2 {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 32px;
+  }
+
+  .title-question-chapter {
+    padding-top: 0;
+  }
+
+  .title-location-chapter {
+    padding-top: 0;
+  }
+
+  .image-dog-footer {
+    width: 260px;
+    height: 269px;
   }
 }/*# sourceMappingURL=style1.css.map */
