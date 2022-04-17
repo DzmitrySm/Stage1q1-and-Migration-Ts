@@ -26,7 +26,19 @@ $font-size-not-only-320: 25px;
     src: url(../../assets/fonts/georgia/georgia-regular.ttf);
 }
 
+html{
 
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+  body
+  {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
 
 * {
     box-sizing: border-box;
@@ -159,8 +171,9 @@ $font-size-not-only-320: 25px;
 
 .flex-section-with-pic {
     display: flex;
+    justify-content: space-between;
+    gap: 42px;
     background: url(../../assets/images/noise_transparent@2x.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #211F20;
-    
     div {
         h2 {
             margin: 0;
@@ -169,30 +182,16 @@ $font-size-not-only-320: 25px;
             color: $color-light;
             line-height: 57px;
             font-weight:$font-normal ;
-        }
-        .wrapper-paragraphs {
-            display: flex;
-            flex-direction:column ;
+        } 
             p {
                 margin: 0;
                 font-family:$font-family-arial;
                 font-size: $font-size-15;
                 color: $color-not-selected-nav;
                 line-height:$line-heigth-24;
-                white-space: nowrap;
-    
+                margin-bottom: 42px;  
             }
         }
-        
-        .padding-last-paragraph {
-            padding-bottom: 42px;
-        }
-    }
-}
-
-.main-doggy {
-    position: absolute;
-    left: calc(50% - 698px/2 + 251px);
 }
 
 .paragraph-section-with-pic {
@@ -248,9 +247,14 @@ $font-size-not-only-320: 25px;
         font-size:$font-size-15;
         line-height:$line-heigth-24;
         color:$color-dark;
+        width: 430px;
 
     }
     
+}
+
+.text-about {
+    padding-bottom: 25px;
 }
 
 .container-image{
@@ -605,6 +609,7 @@ font-style: italic;
 font-weight: $font-normal;
 font-size: 12px;
 line-height: 18px;
+width: 380px;
 }
 
 .background-footer {
@@ -785,6 +790,13 @@ line-height: 18px;
 .flex-section-with-pic {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:0;
+}
+
+.paragraph-section-with-pic {
+    width: 460px;
 }
 
 .text-title-first {
@@ -798,17 +810,13 @@ line-height: 18px;
 .wrapper-button {
 display: flex;
 justify-content: center;
-padding-bottom: 693px;
+padding-bottom: 100px;
 }
-
 .main-doggy {
-width: 569px;
-height: 593px;
-left: calc(50% - 569px/2 + 70px);
-top: 572px;
-bottom: 0;
+    width: 569px;
+    height: 593px;
+    //margin-left: 70px;
 }
-
 .title-about-shelter {
     padding-top: 80px;
 }
@@ -949,15 +957,12 @@ img.image-pet {
     .wrapper-button {
         display: flex;
         justify-content: center;
-        padding-bottom: 377px;
+        padding-bottom: 105px;
         }
 
     .main-doggy {
-
         width: 260px;
         height: 271.77px;
-        top:551px;
-        left: calc(50% - 260px/2 + 40px);
         }
 
         .wrapper-paragraphs {
@@ -966,26 +971,42 @@ img.image-pet {
             text-align: center;
         }
 
+    
+        .flex p {
+            width: 300px;
+            text-align: justify;
+            padding: 0 15px;
+        }
+
+        .text-about {
+            padding-bottom: 22px;
+        }
+
+        .paragraph-section-with-pic {
+            width: 300px;
+            text-align: center;
+        }
+
+       
+
         .flex {
-            display: flex;
-            justify-content: center;
-            gap: 120px;
-            padding-top: 80px;
-            margin-bottom: 100px;
+            gap: 42px;
+            margin-bottom: 42.4px;
             h2 {
-                margin: 0;
-                font-family: $font-family-georgia;
-                font-size: $font-size-35;
-                font-weight: $font-normal;
-                line-height: 45px;
-                color: $color-dark-section-name;
-                letter-spacing: 0.06em;
+                font-size: 25px;
+                line-height: 32.5px;
+                text-align: center;
+                            
             }
-            p {
-                text-align: justify;
-        
-            }
-            
+        }
+
+        .pets {
+            width: 260px;
+            height: 353.6px;
+        }
+
+        .title-about-shelter {
+            padding-top: 42px;
         }
 
         .wrapper-card-katrine {
@@ -1004,11 +1025,15 @@ img.image-pet {
         }
 
         .flex-cards-first-string {
-            column-gap: 30x;
-            margin-left: 10px;
-            margin-right: 10px;
+            column-gap: 30px;
+            margin-left: 5px;
+            margin-right: 5px;
             div {
                     width: 130px;
+                    span {
+                        font-size: 15px;
+                        line-height: 17px;
+                    }
                 }
         }
 
@@ -1022,15 +1047,41 @@ img.image-pet {
 }
         }
 
+        
+        .our-friends {
+            padding-bottom: 0;
+            h2 {
+                font-size: 25px;
+                line-height: 32px;
+            }
+        }
+
         .flex-our-friends {
             padding-top: 0;
             padding-bottom: 42px;
+            flex-direction: column;
+        }
+
+        .helps-our-shelters {
+            h2 {
+               font-size: 25px;
+               line-height: 32px;
+            }
+        }
+
+        .title-helps-our-shelters {
+            padding-top: 42px;
         }
 
         .title-our-friends-second {
             padding-bottom: 42px;
         }
         
+
+        .bank-information {
+            width: 280px;
+            text-align: justify;
+        }
         
         .flex-footer {
             padding-top: 30px;
@@ -1056,6 +1107,40 @@ img.image-pet {
             width: 260px;
             height: 269px;
         }
+
+        .wrapper-arrow-left {
+            order: 5;
+        }
+        .wrapper-arrow-right {
+            order: 5;
+        }
+
+        .button-other-pets {
+            padding-bottom: 42px;
+        }
+
+        
+        .donation-content {
+            align-items: center;
+        h2 {  
+           font-size: 25px;
+           line-height: 32px;   
+        }
+        span {
+            line-height: 24px;
+        }
+    
+    }
+
+    .wrapper-for-bank-card  {
+        width: 281px;
+        a{
+            font-size: 15px;
+            line-height: 17px;
+            letter-spacing: 0.06em;
+            
+        }
+    }
         
         
         

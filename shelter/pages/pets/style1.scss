@@ -26,7 +26,19 @@ $color-burger-pets:#000000;
     src: url(../../assets/fonts/georgia/georgia-regular.ttf);
 }
 
+html{
 
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+  body
+  {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
 
 * {
     box-sizing: border-box;
@@ -730,13 +742,37 @@ header {
 }
    }
 
+   .flex-our-friends {
+       padding-top: 0;
+   }
+
+   .title-our-friends-second {
+    padding-bottom: 30px;
+   }
+
+   .wrapper-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 0;
+    padding-bottom: 76px;
+}
+
 
     .flex-footer {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
         column-gap: 60px;
-        padding-top: 40px;
+        padding-top: 30px;
+    }
+
+    .title-location-chapter {
+        padding-top: 0;
+    }
+
+    .title-question-chapter {
+        padding-top: 0;
     }
     
     .wrapper-card-freddie {
@@ -844,6 +880,7 @@ header {
     width: 260px;
     height: 269px;
 }
+
 
 
 }
