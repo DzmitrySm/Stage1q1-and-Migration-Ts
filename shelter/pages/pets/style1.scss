@@ -15,6 +15,7 @@ $font-size-35: 35px;
 $color-dark: #4C4C4C;
 $line-heigth-24: 24px;
 $color-burger-pets:#000000;
+$font-size-menu-run-menu: 32px;
 
 @font-face {
     font-family: Arial, Verdana, sans-serif;
@@ -56,6 +57,7 @@ html{
 
 header {
     position: fixed;
+    z-index: 5;
     top:0;
     width: 100%;
     background:$color-light;
@@ -112,7 +114,7 @@ header {
                    border: 1px solid $title-shelter-color;
                    width: 58px;
                    bottom: -3px;
-                   right: 35px;
+                   left: 0;
                    
                }
            }
@@ -135,6 +137,11 @@ header {
            
        }
    }
+}
+
+.overlay{
+    position: fixed;
+    overflow: hidden;  
 }
 
 .burger-menu {
@@ -807,14 +814,85 @@ header {
     padding: 0 10px;
    }
 
-.navigation {
-    display: none;
+   .navigation {
+    //display: none;
+    position: fixed;
+    right: 0;
+    width: 320px;
+    height: 100%;
+    background-color:$color-button;
+    z-index: 5;
+    transform: translateX(100%);
+    transition: .3s all linear;
+    ul {
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        gap:40px;
+    li {
+        padding-right: 0;
+        &:nth-child(2) {
+            &::after {
+                width: 123px;
+                bottom: -3px;
+                 
+            }
+        }
+a {
+    font-family: $font-family-arial;
+    font-weight: $font-normal;
+    line-height: 51px;
+    color: $color-not-selected-nav;
+    font-size: $font-size-menu-run-menu;
+}
+    }
+}
+}
+
+
+.navigation-active {
+    transform: translateX(0);  
 }
 
 .burger-menu {
     display: block;
     margin-right: 43px;
+    z-index: 6;
+    cursor: pointer;
 }
+
+.burger-menu-active {
+    transform: rotate(90deg);
+}
+
+.overlay {
+    position: fixed;
+    overflow: hidden;
+}
+
+.overlay-blackout {
+    transform: translateX(100%);
+    z-index:3;
+    position: fixed;
+    left:0;
+    top:0;
+    right: 0;
+    bottom:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background: rgba(41, 41, 41, 0.6);
+}
+
+.overlay-blackout-active {
+    transform: translateX(0);
+}
+
+
 
 .our-friends {
     h2 { 

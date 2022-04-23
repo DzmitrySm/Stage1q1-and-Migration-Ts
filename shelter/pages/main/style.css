@@ -864,13 +864,79 @@ html {
     letter-spacing: 0.06em;
   }
 
+  .overlay {
+    position: fixed;
+    overflow: hidden;
+  }
+
+  .overlay-blackout {
+    transform: translateX(100%);
+    z-index: 3;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background: rgba(41, 41, 41, 0.6);
+    cursor: pointer;
+  }
+
+  .overlay-blackout-active {
+    transform: translateX(0);
+  }
+
   .burger-menu {
     display: block;
     margin-right: 43px;
+    z-index: 6;
+    cursor: pointer;
+  }
+
+  .burger-menu-active {
+    transform: rotate(90deg);
   }
 
   .navigation {
-    display: none;
+    position: fixed;
+    right: 0;
+    width: 320px;
+    height: 100%;
+    background-color: #292929;
+    z-index: 5;
+    transform: translateX(100%);
+    transition: 0.3s all linear;
+  }
+  .navigation ul {
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    gap: 40px;
+  }
+  .navigation ul li {
+    padding-right: 0;
+  }
+  .navigation ul li:first-child::after {
+    width: 243px;
+    bottom: -3px;
+    right: 0;
+  }
+  .navigation ul li a {
+    font-family: "Arial", "Verdana", sans-serif;
+    font-weight: 400;
+    line-height: 51px;
+    color: #CDCDCD;
+    font-size: 32px;
+  }
+
+  .navigation-active {
+    transform: translateX(0);
   }
 
   .wrapper-button {
