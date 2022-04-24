@@ -35,7 +35,7 @@ html {
 
 header {
   position: fixed;
-  z-index: 5;
+  z-index: 2;
   top: 0;
   width: 100%;
   background: #FFFFFF;
@@ -812,7 +812,7 @@ header {
 
   .overlay-blackout {
     transform: translateX(100%);
-    z-index: 3;
+    z-index: 0;
     position: fixed;
     left: 0;
     top: 0;
@@ -824,10 +824,12 @@ header {
     height: 100vh;
     width: 100%;
     background: rgba(41, 41, 41, 0.6);
+    cursor: pointer !important;
   }
 
   .overlay-blackout-active {
     transform: translateX(0);
+    cursor: pointer !important;
   }
 
   .our-friends h2 {

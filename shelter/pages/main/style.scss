@@ -299,9 +299,49 @@ html{
 
 .flex-our-friends {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding-bottom: 60px;
+}
+
+.wrapper-animals {
+    max-width: 990px;
+    overflow: hidden;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.carousel {
+    display: flex;
+    position: relative;
+    left: -1080px;
+    gap:90px;
+}
+
+@keyframes move-left {
+from {left: -1080px}
+to {left:0px}
+}
+
+.transition-left {
+    animation-name: move-left;
+    animation-duration: 5s;
+}
+
+@keyframes move-right {
+    from {left: -1080px}
+    to {left: -2160px}
+    }
+    
+    .transition-right {
+        animation-name: move-right;
+        animation-duration: 5s;
+    }
+
+
+.item {
+    display: flex;
+    gap:90px;
 }
 
 .wrapper-card-katrine {
@@ -310,8 +350,7 @@ html{
     justify-content: center;
     align-items: center;
     height: 435px;
-    margin-left: 53px;
-    margin-right: 90px;
+    //margin-right: 90px;
     background-color:$background-cards;
     border-radius: 9px;
     transition: .3s;
@@ -356,7 +395,7 @@ html{
     justify-content: center;
     align-items: center;
     height: 435px;
-    margin-right: 90px;
+    //margin-right: 90px;
     background-color:$background-cards;
     border-radius: 9px;
     transition: .3s;
@@ -397,7 +436,209 @@ html{
     justify-content: center;
     align-items: center;
     height: 435px;
-    margin-right: 53px;
+    //margin-right: 53px;
+    background-color:$background-cards;
+    border-radius: 9px;
+    transition: .3s;
+    &:hover{
+        background-color: #FFFFFF;
+        cursor:pointer;
+        button {
+            cursor: pointer;
+            background-color:$color-hover-btn;
+        }
+    }
+
+    
+    span {
+        padding-top: 30px;
+        font-size: 20px;
+        line-height: 23px;
+        letter-spacing: 0.06em;
+    }
+    div{
+        padding-top: 30px;
+        button {
+            padding: 15px 45px;
+            margin-bottom: 30px;
+            border: 2px solid $title-shelter-color;
+            border-radius: 100px;
+            font-family:$font-family-georgia;
+            font-weight: $font-normal;
+            font-size: 17px;
+            line-height: 22px;
+            letter-spacing: 0.06em;
+            color:$color-button;
+        }
+    }
+}
+
+.wrapper-card-sophia {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 435px;
+    background-color:$background-cards;
+    border-radius: 9px;
+    transition: .3s;
+    &:hover{
+        background-color: #FFFFFF;
+        cursor:pointer;
+        button {
+            cursor: pointer;
+            background-color:$color-hover-btn;
+        }
+    }
+    span {
+        padding-top: 30px;
+        font-size: 20px;
+        line-height: 23px;
+        letter-spacing: 0.06em;
+    }
+    div{
+        padding-top: 30px;
+        button {
+            padding: 15px 45px;
+            margin-bottom: 30px;
+            border: 2px solid $title-shelter-color;
+            border-radius: 100px;
+            font-family:$font-family-georgia;
+            font-weight: $font-normal;
+            font-size: 17px;
+            line-height: 22px;
+            letter-spacing: 0.06em;
+            color:$color-button;
+        }
+    }
+}
+
+.wrapper-card-timmy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 435px;
+    background-color:$background-cards;
+    border-radius: 9px;
+    transition: .3s;
+    &:hover{
+        background-color: #FFFFFF;
+        cursor:pointer;
+        button {
+            cursor: pointer;
+            background-color:$color-hover-btn;
+        }
+    }
+    span {
+        padding-top: 30px;
+        font-size: 20px;
+        line-height: 23px;
+        letter-spacing: 0.06em;
+    }
+    div{
+        padding-top: 30px;
+        button {
+            padding: 15px 45px;
+            margin-bottom: 30px;
+            border: 2px solid $title-shelter-color;
+            border-radius: 100px;
+            font-family:$font-family-georgia;
+            font-weight: $font-normal;
+            font-size: 17px;
+            line-height: 22px;
+            letter-spacing: 0.06em;
+            color:$color-button;
+        }
+    }
+}
+
+.wrapper-card-charly {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 435px;
+    background-color:$background-cards;
+    border-radius: 9px;
+    transition: .3s;
+    &:hover{
+        background-color: #FFFFFF;
+        cursor:pointer;
+        button {
+            cursor: pointer;
+            background-color:$color-hover-btn;
+        }
+    }
+    span {
+        padding-top: 30px;
+        font-size: 20px;
+        line-height: 23px;
+        letter-spacing: 0.06em;
+    }
+    div{
+        padding-top: 30px;
+        button {
+            padding: 15px 45px;
+            border: 2px solid $title-shelter-color;
+            border-radius: 100px;
+            font-family:$font-family-georgia;
+            font-weight: $font-normal;
+            font-size: 17px;
+            line-height: 22px;
+            letter-spacing: 0.06em;
+            color:$color-button;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.wrapper-card-scarlett {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 435px;
+    background-color:$background-cards;
+    border-radius: 9px;
+    transition: .3s;
+    &:hover{
+        background-color: #FFFFFF;
+        cursor:pointer;
+        button {
+            cursor: pointer;
+            background-color:$color-hover-btn;
+        }
+    }
+    span {
+        padding-top: 30px;
+        font-size: 20px;
+        line-height: 23px;
+        letter-spacing: 0.06em;
+    }
+    div{
+        padding-top: 30px;
+        button {
+            padding: 15px 45px;
+            margin-bottom: 30px;
+            border: 2px solid $title-shelter-color;
+            border-radius: 100px;
+            font-family:$font-family-georgia;
+            font-weight: $font-normal;
+            font-size: 17px;
+            line-height: 22px;
+            letter-spacing: 0.06em;
+            color:$color-button;
+        }
+    }
+}
+
+.wrapper-card-freddie {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 435px;
     background-color:$background-cards;
     border-radius: 9px;
     transition: .3s;
@@ -757,12 +998,189 @@ width: 380px;
         line-height: 23px;
         color:$title-shelter-color;
         letter-spacing: 0.06em;
-
        }
 
     }
+    }
 
-}
+    .text-modal-about {
+        display: block; 
+        width: 220px;
+    }
+
+    .modal-window-jennifer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        z-index: 10;
+        margin:auto;
+        left:0;
+        right:0;
+        bottom:0;
+        top:0;
+        gap: 11px;
+        h3 {
+            margin: 0;
+        }
+        h4 {
+            margin:0;
+        }
+    }
+
+    .modal-window-katrine {
+        visibility: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        z-index: 10;
+        margin:auto;
+        left:0;
+        right:0;
+        bottom:0;
+        top:0;
+        gap: 11px;
+        h3 {
+            margin: 0;
+        }
+        h4 {
+            margin:0;
+        }
+    }
+
+    .modal-window-timmy {
+        visibility: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        z-index: 10;
+        margin:auto;
+        left:0;
+        right:0;
+        bottom:0;
+        top:0;
+        gap: 11px;
+        h3 {
+            margin: 0;
+        }
+        h4 {
+            margin:0;
+        }
+    }
+
+    .modal-window-woody {
+        visibility: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        z-index: 10;
+        margin:auto;
+        left:0;
+        right:0;
+        bottom:0;
+        top:0;
+        gap: 11px;
+        h3 {
+            margin: 0;
+        }
+        h4 {
+            margin:0;
+        }
+    }
+
+    .modal-window-charly {
+        visibility: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        z-index: 10;
+        margin:auto;
+        left:0;
+        right:0;
+        bottom:0;
+        top:0;
+        gap: 11px;
+        h3 {
+            margin: 0;
+        }
+        h4 {
+            margin:0;
+        }
+    }
+
+    .modal-window-scarlett {
+        visibility: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        z-index: 10;
+        margin:auto;
+        left:0;
+        right:0;
+        bottom:0;
+        top:0;
+        gap: 11px;
+        h3 {
+            margin: 0;
+        }
+        h4 {
+            margin:0;
+        }
+    }
+
+    .modal-window-freddie {
+        visibility: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        z-index: 10;
+        margin:auto;
+        left:0;
+        right:0;
+        bottom:0;
+        top:0;
+        gap: 11px;
+        h3 {
+            margin: 0;
+        }
+        h4 {
+            margin:0;
+        }
+    }
+
+    .modal-window-sophia {
+        visibility: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        z-index: 10;
+        margin:auto;
+        left:0;
+        right:0;
+        bottom:0;
+        top:0;
+        gap: 11px;
+        h3 {
+            margin: 0;
+        }
+        h4 {
+            margin:0;
+        }
+    }
+
+
+
+
+
+
+
 
 
 @media screen and (max-width: 1279px) {
@@ -830,10 +1248,42 @@ padding-bottom: 100px;
     gap: 80px;
 }
 
-.wrapper-card-woody {
-  position: absolute;
-  z-index: -9999;  
+.wrapper-animals {
+    display: flex;
+    max-width: 580px;
+    overflow: hidden;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
 }
+
+.item {
+    gap:40px;
+}
+
+.carousel {
+    left: -620px;
+    gap:40px;
+}
+
+@keyframes move-left {
+    from {left: -620px}
+    to {left:0px}
+    }
+    
+    .transition-left {
+        animation-name: move-left;
+        animation-duration: 5s;
+    }
+    
+    @keyframes move-right {
+        from {left: -620xx}
+        to {left: -1240px}
+        }
+        
+        .transition-right {
+            animation-name: move-right;
+            animation-duration: 5s;
+        }
 
 .flex-our-friends {
     display: flex;
@@ -842,18 +1292,6 @@ padding-bottom: 100px;
     gap: 0; 
     padding-bottom: 60px;
 }
-
-.wrapper-card-katrine {
-    margin-left: 1.5%;
-    margin-right: 40px;
-    
-    }
-
-.wrapper-card-jennifer {
-margin-right: 1.5%;
-
-}
-
 
 .flex-cards-first-string {
     column-gap: 60px;
@@ -1099,16 +1537,31 @@ img.image-pet {
             padding-top: 42px;
         }
 
-        .wrapper-card-katrine {
-            margin-right: 50%;
-            margin-left: 50%;
+        .wrapper-animals {
+            max-width: 270px;
+            margin-right: calc(50% - 135px );
+            margin-left:  calc(50% - 135px );
         }
 
-        .wrapper-card-jennifer {
-            display: none;
-        }
-
-        
+        @keyframes move-left {
+            from {left: -620px}
+            to {left:-310px}
+            }
+            
+            .transition-left {
+                animation-name: move-left;
+                animation-duration: 5s;
+            }
+            
+            @keyframes move-right {
+                from {left: -620px}
+                to {left:-930px}
+                }
+                
+                .transition-right {
+                    animation-name: move-right;
+                    animation-duration: 5s;
+                }
 
         .image-pet {
             width: 260px;
