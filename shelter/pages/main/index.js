@@ -5,6 +5,7 @@
   const closeMenuByLink = document.querySelectorAll('.nav-link')
   const scrollBehaviour = document.querySelector('.body')
   const overlay = document.querySelector('.overlay-blackout')
+  const mainTitleVisible = document.querySelector('.wrapper-title-burger')
   burgerMenu.addEventListener('click', () => {
       navItems.classList.toggle('navigation-active')
       burgerMenu.classList.toggle('burger-menu-active')
@@ -12,6 +13,8 @@
       document.body.style.paddingRight = paddingOfset
       scrollBehaviour.classList.toggle('overlay')
       overlay.classList.toggle('overlay-blackout-active')
+      mainTitleVisible.classList.toggle('wrapper-title-burger-active')
+
   });
   overlay.addEventListener('click', () => {
     overlay.classList.remove('overlay-blackout-active')
@@ -19,6 +22,7 @@
     navItems.classList.remove('navigation-active')
     document.body.style.paddingRight = 0;
     scrollBehaviour.classList.remove('overlay')
+    mainTitleVisible.classList.remove('wrapper-title-burger-active')
   } )
   closeMenuByLink.forEach((element) => element.addEventListener('click', () => {
     navItems.classList.remove('navigation-active');
@@ -26,6 +30,7 @@
     scrollBehaviour.classList.remove('overlay')
     document.body.style.paddingRight = 0;
     overlay.classList.remove('overlay-blackout-active')
+    mainTitleVisible.classList.remove('wrapper-title-burger-active')
 }))
 
 }());
@@ -168,7 +173,84 @@ carousel.addEventListener('animationend', (animationEvent) => {
 
  //Pop-up
 
+ const cardJennifer = document.querySelector('.wrapper-card-jennifer')
+ const visibleCardJennifer = document.querySelector('.modal-window-jennifer')
+ const buttonCross = document.querySelector('.cross')
+ const overlay = document.querySelector('.overlay-blackout')
+ const scrollBehaviour = document.querySelector('.body')
+ cardJennifer.addEventListener('click', () => {
+  visibleCardJennifer.classList.add('modal-window-jennifer-active')
+  overlay.classList.toggle('overlay-blackout-active')
+  scrollBehaviour.classList.toggle('overlay')
+ })
+ buttonCross.addEventListener('click', () => {
+  visibleCardJennifer.classList.remove('modal-window-jennifer-active')
+ })
+
+ const cardKatrine = document.querySelector('.wrapper-card-katrine')
+ const visibleCardKatrine = document.querySelector('.modal-window-katrine')
+ const buttonCrossKatrine = document.querySelector('.modify-katrine-button')
+ cardKatrine.addEventListener('click', () => {
+  visibleCardKatrine.classList.add('modal-window-katrine-active')
+  overlay.classList.toggle('overlay-blackout-active')
+  scrollBehaviour.classList.toggle('overlay')
+ })
+ buttonCrossKatrine.addEventListener('click', () => {
+   if (visibleCardKatrine.target.contains === 'wrapper-card-katrine-active') {
+    visibleCardKatrine.classList.remove('modal-window-katrine-active')
+   }
+ })
  
+
+ const cardTimmy = document.querySelector('.wrapper-card-timmy')
+ const visibleCardTimmy = document.querySelector('.modal-window-timmy')
+ cardTimmy.addEventListener('click', () => {
+  visibleCardTimmy.classList.add('modal-window-timmy-active')
+  overlay.classList.toggle('overlay-blackout-active')
+  scrollBehaviour.classList.toggle('overlay')
+ })
+
+ const cardWoody = document.querySelector('.wrapper-card-woody')
+ const visibleCardWoody = document.querySelector('.modal-window-woody')
+ cardWoody.addEventListener('click', () => {
+  visibleCardWoody.classList.add('modal-window-woody-active')
+  overlay.classList.toggle('overlay-blackout-active')
+  scrollBehaviour.classList.toggle('overlay')
+ })
+
+ const cardCharly = document.querySelector('.wrapper-card-charly')
+ const visibleCardCharly = document.querySelector('.modal-window-charly')
+ cardCharly.addEventListener('click', () => {
+  visibleCardCharly.classList.add('modal-window-charly-active')
+  overlay.classList.toggle('overlay-blackout-active')
+  scrollBehaviour.classList.toggle('overlay')
+ })
+
+ const cardScarlett = document.querySelector('.wrapper-card-scarlett')
+ const visibleCardScarlett = document.querySelector('.modal-window-scarlett')
+ cardScarlett.addEventListener('click', () => {
+  visibleCardScarlett.classList.add('modal-window-scarlett-active')
+  overlay.classList.toggle('overlay-blackout-active')
+  scrollBehaviour.classList.toggle('overlay')
+ })
+
+ const cardFreddie = document.querySelector('.wrapper-card-freddie')
+ const visibleCardFreddie = document.querySelector('.modal-window-freddie')
+ cardFreddie.addEventListener('click', () => {
+  visibleCardFreddie.classList.add('modal-window-freddie-active')
+  overlay.classList.toggle('overlay-blackout-active')
+  scrollBehaviour.classList.toggle('overlay')
+ })
+
+ const cardSophia = document.querySelector('.wrapper-card-sophia')
+ const visibleCardSophia = document.querySelector('.modal-window-sophia')
+ cardSophia.addEventListener('click', () => {
+  visibleCardSophia.classList.add('modal-window-sophia-active')
+  overlay.classList.toggle('overlay-blackout-active')
+  scrollBehaviour.classList.toggle('overlay')
+ })
+
+
 
 
  
