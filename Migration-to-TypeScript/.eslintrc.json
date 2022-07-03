@@ -22,4 +22,5 @@
       "class-methods-use-this": "off",
       "@typescript-eslint/no-explicit-any": 2
   }
+  
 }

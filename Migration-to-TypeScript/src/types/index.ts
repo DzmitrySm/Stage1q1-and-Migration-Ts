@@ -1,24 +1,30 @@
 export interface Isource {
-"id": string;
-"name": string;
-"description": string;
-"url": string;
-"category": string;
-"language": string;
-"country": string;
-
+    sources: [
+        {
+            id: string;
+            name: string;
+        }
+    ];
 }
 
 export interface Inews {
-  "id": string;
-  "name": string;
-  "author": string;
-  "title": string;
-  "description": string;
-  "url": string;
-  "urlToImage": string;
-  "publishedAt": string;
-  "content": string;
-
+    articles: [
+        {
+            source: {
+                id: string | null;
+                name: string;
+            };
+            author: string;
+            title: string;
+            description: string;
+            publishedAt: string;
+            url: string;
+            urlToImage: string;
+        }
+    ];
 }
-  
+
+export interface Iloader {
+    baseLink: string;
+    options: { apiKey: string };
+}
