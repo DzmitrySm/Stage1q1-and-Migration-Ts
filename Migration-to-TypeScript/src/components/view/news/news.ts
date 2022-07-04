@@ -1,32 +1,6 @@
 import './news.css';
 import { Inews } from '../../../types/index';
-class News implements Inews {
-    articles: [
-        {
-            source: { id: string; name: string };
-            author: string;
-            title: string;
-            description: string;
-            publishedAt: string;
-            url: string;
-            urlToImage: string;
-        }
-    ];
-    constructor(
-        articles: [
-            {
-                source: { id: string; name: string };
-                author: string;
-                title: string;
-                description: string;
-                publishedAt: string;
-                url: string;
-                urlToImage: string;
-            }
-        ]
-    ) {
-        this.articles = articles;
-    }
+class News {
     draw(data: [Inews['articles'][0]]): void {
         const news = data.length >= 10 ? data.filter((_item, idx) => idx < 10) : data;
 

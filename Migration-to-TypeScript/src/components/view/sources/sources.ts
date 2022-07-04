@@ -1,22 +1,6 @@
 import './sources.css';
 import { Isource } from '../../../types/index';
-class Sources implements Isource {
-    sources: [
-        {
-            id: string;
-            name: string;
-        }
-    ];
-    constructor(
-        sources: [
-            {
-                id: string;
-                name: string;
-            }
-        ]
-    ) {
-        this.sources = sources;
-    }
+class Sources {
     draw(data: [Isource['sources'][0]]): void {
         const fragment = document.createDocumentFragment();
         const sourceItemTemp = document.querySelector('#sourceItemTemp') as HTMLTemplateElement;
