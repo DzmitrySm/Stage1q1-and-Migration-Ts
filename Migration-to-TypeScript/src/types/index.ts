@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 export interface Isource {
     sources: [
         {
@@ -28,3 +29,5 @@ export interface Iloader {
     baseLink: string;
     options: { apiKey: string };
 }
+
+export type Callback<T> = (data: T) => void;

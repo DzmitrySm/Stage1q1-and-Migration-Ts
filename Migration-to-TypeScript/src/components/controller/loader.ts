@@ -1,4 +1,6 @@
 import { Iloader } from '../../types/index';
+import { Callback } from '../../types/index';
+
 class Loader implements Iloader {
     baseLink: string;
     options: { apiKey: string };
@@ -6,9 +8,9 @@ class Loader implements Iloader {
         this.baseLink = baseLink;
         this.options = options;
     }
-    getResp(
+    getResp<TResp>(
         { endpoint = '', options = {} },
-        callback = (): void => {
+        callback: Callback<TResp> = (): void => {
             console.error('No callback for GET response');
         }
     ) {
@@ -35,7 +37,7 @@ class Loader implements Iloader {
         return url.slice(0, -1);
     }
 
-    load(method: string, endpoint: string, callback, options = {}): void {
+    load<TResp>(method: string, endpoint: string, callback: Callback<TResp>, options = {}): void {
         fetch(this.makeUrl(options, endpoint), { method })
             .then(this.errorHandler)
             .then((res) => res.json())
